@@ -1,0 +1,319 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Yayi_Body
+  m_Shader: {fileID: 4800000, guid: 21f4c8a5e26eeba4492d22bb1c875c42, type: 3}
+  m_ShaderKeywords: _EMISSION
+  m_LightmapFlags: 1
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _BaseTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 9c0def0b9cf962544ab7895859cc4082, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _BumpMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _DetailAlbedoMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _DetailMask
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _DetailNormalMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _EmissionMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _EnvMapSampler
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _FalloffSampler
+      second:
+        m_Texture: {fileID: 2800000, guid: 4f69de806d5963e40828530ef9d7819b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _HighLightSampler
+      second:
+        m_Texture: {fileID: 2800000, guid: 2ae8364b517bc2741b3b5ba0bfbaa63f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 2800000, guid: de068a3c7fcb8b44785010060f81afd7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MetallicGlossMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MiscTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 2ae8364b517bc2741b3b5ba0bfbaa63f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _NormalMapSampler
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _OcclusionMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _ParallaxMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _RimLightSampler
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _SpecularReflectionSampler
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _SphereCube
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _ToonTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 7a56b198a073ee445b2fb4695a6e21cd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: _ALPower
+      second: 0
+    - first:
+        name: _AddLightToonCen
+      second: -0.1
+    - first:
+        name: _AddLightToonMin
+      second: 0.5
+    - first:
+        name: _AmbientToDiffuse
+      second: 5
+    - first:
+        name: _BumpScale
+      second: 1
+    - first:
+        name: _Cutoff
+      second: 0.5
+    - first:
+        name: _DetailNormalMapScale
+      second: 1
+    - first:
+        name: _DstBlend
+      second: 0
+    - first:
+        name: _EdgeScale
+      second: 0
+    - first:
+        name: _EdgeSize
+      second: 0
+    - first:
+        name: _EdgeThickness
+      second: 1.3
+    - first:
+        name: _GlossMapScale
+      second: 1
+    - first:
+        name: _Glossiness
+      second: 0.5
+    - first:
+        name: _GlossyReflections
+      second: 1
+    - first:
+        name: _HairBlackCutValue
+      second: 0.001
+    - first:
+        name: _HairLightCutValue
+      second: -1
+    - first:
+        name: _HairLightMutiValue
+      second: 1
+    - first:
+        name: _HairOutLineColorScaleValue
+      second: 1
+    - first:
+        name: _HairOutLineValue
+      second: 0
+    - first:
+        name: _HairSmooth
+      second: -100
+    - first:
+        name: _HairSpecCutValue
+      second: 0
+    - first:
+        name: _LightCutValue
+      second: 0.1
+    - first:
+        name: _LightMutiValue
+      second: 1.71
+    - first:
+        name: _Metallic
+      second: 0
+    - first:
+        name: _Mode
+      second: 0
+    - first:
+        name: _NoShadowCasting
+      second: 0
+    - first:
+        name: _OcclusionStrength
+      second: 1
+    - first:
+        name: _OutLineColorScaleValue
+      second: 0.8
+    - first:
+        name: _OutLineValue
+      second: 0.0003
+    - first:
+        name: _Parallax
+      second: 0.02
+    - first:
+        name: _Revision
+      second: -1
+    - first:
+        name: _ShadowLum
+      second: 10
+    - first:
+        name: _Shininess
+      second: 0
+    - first:
+        name: _SmoothnessTextureChannel
+      second: 0
+    - first:
+        name: _SpecularHighlights
+      second: 1
+    - first:
+        name: _SpecularPower
+      second: 20
+    - first:
+        name: _SrcBlend
+      second: 1
+    - first:
+        name: _TessEdgeLength
+      second: 5
+    - first:
+        name: _TessExtrusionAmount
+      second: 0
+    - first:
+        name: _TessPhongStrength
+      second: 0.5
+    - first:
+        name: _UVSec
+      second: 0
+    - first:
+        name: _UnLightMutiValue
+      second: 1.26
+    - first:
+        name: _ZWrite
+      second: 1
+    - first:
+        name: _tmp
+      second: 0
+    - first:
+        name: _tmp1
+      second: 1
+    - first:
+        name: _tmp2
+      second: 0.137
+    - first:
+        name: _tmp3
+      second: 0.01
+    m_Colors:
+    - first:
+        name: _Ambient
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _Color
+      second: {r: 0.8897059, g: 0.8897059, b: 0.8897059, a: 1}
+    - first:
+        name: _EdgeColor
+      second: {r: 0, g: 0, b: 0, a: 1}
+    - first:
+        name: _EmissionColor
+      second: {r: 0, g: 0, b: 0, a: 1}
+    - first:
+        name: _Emissive
+      second: {r: 0, g: 0, b: 0, a: 0}
+    - first:
+        name: _HairBackColor
+      second: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - first:
+        name: _HairLightColor
+      second: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - first:
+        name: _HairOutLineMutiColorValue
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _HairSpecColor
+      second: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - first:
+        name: _HairUnLightColor
+      second: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - first:
+        name: _OutLineMutiColorValue
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _ShadowColor
+      second: {r: 0.43382353, g: 0.43382353, b: 0.43382353, a: 1}
+    - first:
+        name: _Specular
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _ToonTone
+      second: {r: 1, g: 0.5, b: 0.5, a: 0}
+    - first:
+        name: _UnLightMutiColor
+      second: {r: 1, g: 1, b: 1, a: 0}
