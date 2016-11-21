@@ -40,7 +40,7 @@ public class CameraSwitcher : MonoBehaviour
     }
 
     // Change the camera position.
-    public void ChangePosition(Transform destination, bool forceStable = false)
+    public void ChangePosition(Transform destination, bool forceStable)
     {
         // Do nothing if disabled.
         if (!enabled) return;
@@ -75,7 +75,7 @@ public class CameraSwitcher : MonoBehaviour
     {
         for (var current = points[0]; true; current = ChooseAnotherPoint(current))
         {
-            ChangePosition(current);
+            ChangePosition(current,false);
             yield return new WaitForSeconds(interval);
         }
     }

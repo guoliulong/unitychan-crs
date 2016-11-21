@@ -19,6 +19,7 @@ namespace UnityChan
 		public Transform child;
 
 		//ボーンの向き
+		//骨的方向
 		public Vector3 boneAxis = new Vector3 (-1.0f, 0.0f, 0.0f);
 		public float radius = 0.05f;
 
@@ -44,6 +45,12 @@ namespace UnityChan
 		private Transform org;
 		//Kobayashi:Reference for "SpringManager" component with unitychan 
 		private SpringManager managerRef;
+
+		[ContextMenu("AutoBindChild")]
+		void AutoBindChild()
+		{
+			child = transform.GetChild(0);
+		}
 
 		private void Awake ()
 		{

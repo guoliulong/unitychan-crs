@@ -110,7 +110,7 @@ public class MidiJack : MonoBehaviour
     }
     
     // Get the CC (knob) value.
-    public static float GetKnob (MidiChannel channel, int knobNumber, float defaultValue = 0.0f)
+    public static float GetKnob (MidiChannel channel, int knobNumber, float defaultValue )
     {
         var cs = instance.channelArray [(int)channel];
         if (cs.knobMap.ContainsKey (knobNumber))
@@ -123,7 +123,7 @@ public class MidiJack : MonoBehaviour
         }
     }
     
-    public static float GetKnob (int knobNumber, float defaultValue = 0.0f)
+    public static float GetKnob (int knobNumber, float defaultValue )
     {
         return GetKnob (MidiChannel.All, knobNumber, defaultValue);
     }

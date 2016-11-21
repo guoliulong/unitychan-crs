@@ -11,6 +11,7 @@
 //
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace UnityChan
 {
@@ -79,5 +80,26 @@ namespace UnityChan
 				}
 			}
 		}
+
+
+		#region AUTO COLLECT BONES
+
+		[ContextMenu("AUTO COLLECT BONES")]
+		void _AutoCollectBones()
+		{
+			var springBones = Object.FindObjectsOfType<SpringBone>();
+			var boneList = new List<SpringBone>();
+			foreach(var bone in springBones)
+			{
+				if(bone.transform.IsChildOf(this.transform))
+				{
+					boneList.Add(bone);
+				}
+			}
+
+			this.springBones = boneList.ToArray();
+		}
+
+		#endregion
 	}
 }

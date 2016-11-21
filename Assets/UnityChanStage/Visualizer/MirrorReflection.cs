@@ -79,7 +79,7 @@ public class MirrorReflection : MonoBehaviour
 		// copy depth
 		Graphics.SetRenderTarget(m_ReflectionDepthTexture);
 		m_matCopyDepth.SetPass(0);
-		DrawFullscreenQuad();
+		DrawFullscreenQuad(1);
 		Graphics.SetRenderTarget(null);
 
 
@@ -266,7 +266,7 @@ public class MirrorReflection : MonoBehaviour
 		reflectionMat.m33 = 1F;
 	}
 
-	static public void DrawFullscreenQuad(float z = 1.0f)
+	static public void DrawFullscreenQuad(float z /*= 1.0f*/)
 	{
 		GL.Begin(GL.QUADS);
 		GL.Vertex3(-1.0f, -1.0f, z);
