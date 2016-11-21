@@ -56,7 +56,7 @@ Shader "GW3/Hair"
 				float4 vertex : SV_POSITION;
 				float2 uv : TEXCOORD0;
 				UNITY_FOG_COORDS(1)
-				LIGHTING_COORDS(2,3)
+				//LIGHTING_COORDS(2,3)
 				float ndotl:TEXCOORD4;
 				float ndotvl:TEXCOORD5;
 				float3 tmp:TEXCOORD6;
@@ -94,7 +94,7 @@ Shader "GW3/Hair"
 			v2f vert (appdata v)
 			{
 				v2f o;
-				TRANSFER_VERTEX_TO_FRAGMENT(o)
+				//TRANSFER_VERTEX_TO_FRAGMENT(o)
 
 				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.uv = TRANSFORM_TEX(v.uv, _BaseTex);

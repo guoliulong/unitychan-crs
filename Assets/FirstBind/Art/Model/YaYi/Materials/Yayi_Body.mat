@@ -18,7 +18,7 @@ Material:
     - first:
         name: _BaseTex
       second:
-        m_Texture: {fileID: 2800000, guid: 9c0def0b9cf962544ab7895859cc4082, type: 3}
+        m_Texture: {fileID: 2800000, guid: b6ee7a8d1119c06459dfd028ed121eba, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -84,7 +84,7 @@ Material:
     - first:
         name: _MiscTex
       second:
-        m_Texture: {fileID: 2800000, guid: 2ae8364b517bc2741b3b5ba0bfbaa63f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7a77fea53a8a58745b984828ba32fcf8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -198,7 +198,7 @@ Material:
       second: 0.1
     - first:
         name: _LightMutiValue
-      second: 1.71
+      second: 1.61
     - first:
         name: _Metallic
       second: 0
@@ -255,7 +255,7 @@ Material:
       second: 0
     - first:
         name: _UnLightMutiValue
-      second: 1.26
+      second: 0.61
     - first:
         name: _ZWrite
       second: 1

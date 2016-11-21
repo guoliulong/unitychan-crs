@@ -1,16 +1,20 @@
 ﻿// Upgrade NOTE: replaced '_World2Object' with 'unity_WorldToObject'
 
-Shader "GW3/Body"
+Shader "GW3/Face"
 {
 	Properties
 	{
 		_BaseTex ("Base Texture", 2D) = "white" {}
 		_MiscTex ("Misc Texture", 2D) = "white" {}
 
-		_LightCutValue("LightCutValue",range(0,1)) = 0
+		_LightBlackCutValue("LightBlackCutValue",range(0,1)) = 0
+		_LightEyeHighLightCutValue("LightEyeHighLightCutValue",range(0,1)) = 0
+		_LightMutiValue("LightMutiValue",float) = 1
+		
+
+
 		_UnLightMutiColor("UnLightMutiColor",color) = (0,0,0,0)
 		_UnLightMutiValue("UnLightMutiValue",float) = 1
-		_LightMutiValue("LightMutiValue",float) = 1
 		_OutLineValue("OutLineValue",float) = 1
 		_OutLineColorScaleValue("OutLineColorScaleValue",float) = 1
 		_OutLineMutiColorValue("_OutLineMutiColorValue",color) = (0,0,0,0)
@@ -49,7 +53,7 @@ Shader "GW3/Body"
 			{
 				float4 vertex : SV_POSITION;
 				float2 uv : TEXCOORD0;
-				//UNITY_FOG_COORDS(1)
+				UNITY_FOG_COORDS(1)
 				//float ndotl:TEXCOORD2;
 				//float ndotvl:TEXCOORD3;
 				float3 vNormal:TEXCOORD2;
@@ -60,16 +64,20 @@ Shader "GW3/Body"
 			sampler2D _BaseTex;
 			float4 _BaseTex_ST;
 			sampler2D _MiscTex;
+			float _LightBlackCutValue;
+			float _LightEyeHighLightCutValue;
+			float _LightMutiValue;
+			
 			float _LightCutValue;
 			float4 _UnLightMutiColor;
-			float _LightMutiValue;
 			float _UnLightMutiValue;
+			float _tmp;
 			v2f vert (appdata v)
 			{
 				v2f o;
 				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.uv = TRANSFORM_TEX(v.uv, _BaseTex);
-				//UNITY_TRANSFER_FOG(o,o.vertex);
+				UNITY_TRANSFER_FOG(o,o.vertex);
 
 				o.vNormal = normalize( mul( UNITY_MATRIX_IT_MV,v.normal).xyz);
 				o.vEyeDir = normalize(-mul(UNITY_MATRIX_MV,v.vertex).xyz);
@@ -86,26 +94,39 @@ Shader "GW3/Body"
 				float4 col = tex2D(_BaseTex, i.uv);
 				float4 miscColor = tex2D(_MiscTex, i.uv);
 
-				float3 diffuseColor;
 
-				if( ndotl  < _LightCutValue)
+
+				float3 diffuseColor = float3(0,0,0);
+
+				//return ndotl;
+				//balck area
+				if( _LightBlackCutValue > miscColor.g)
 				{
-					diffuseColor = col.rgb * _UnLightMutiColor * _UnLightMutiValue;// * miscColor.g;
+					diffuseColor = col.rgb * _UnLightMutiValue;
 				}
 				else
 				{
-					if( 1-ndotl > miscColor.g)
-					{
-						diffuseColor = col.rgb * _UnLightMutiColor*_UnLightMutiValue;
-					}
-					else
+					//eye high light
+					if(_LightEyeHighLightCutValue < miscColor.g)
 					{
 						diffuseColor = col.rgb * _LightMutiValue;
 					}
+					else
+					{
+						if(ndotl <  miscColor.g/8)
+						{
+							diffuseColor = col.rgb * _UnLightMutiValue;
+						}
+						else
+						{
+							diffuseColor = col.rgb * _LightMutiValue;
+						}
+					}
 				}
+				
 
+				return float4(diffuseColor,1);
 
-				return  float4(diffuseColor,1);
 			}
 
 			ENDCG
