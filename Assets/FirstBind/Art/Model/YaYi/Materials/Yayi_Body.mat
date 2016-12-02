@@ -198,7 +198,7 @@ Material:
       second: 0.1
     - first:
         name: _LightMutiValue
-      second: 1.61
+      second: 0.85
     - first:
         name: _Metallic
       second: 0
@@ -316,4 +316,4 @@ Material:
       second: {r: 1, g: 0.5, b: 0.5, a: 0}
     - first:
         name: _UnLightMutiColor
-      second: {r: 1, g: 1, b: 1, a: 0}
+      second: {r: 0.99264705, g: 0.8247729, b: 0.97412306, a: 0}

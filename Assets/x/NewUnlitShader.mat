@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: NewUnlitShader
+  m_Shader: {fileID: 4800000, guid: 0da27b9bd35a218479304adc8b3cc91f, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _ATex
+      second:
+        m_Texture: {fileID: 2800000, guid: e0f70859469fbd545b78bea5d2056c70, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _BTex
+      second:
+        m_Texture: {fileID: 2800000, guid: f874dbe30753f1e4aa71048cbe021c73, type: 3}
+        m_Scale: {x: 1.16, y: 0.85}
+        m_Offset: {x: 0.13, y: 0.47}
+    - first:
+        name: _BlendTex
+      second:
+        m_Texture: {fileID: 2800000, guid: b44549fe468c68b439013e07306682d9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _GTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 5394a26a4daa9574bb0939f3c200f187, type: 3}
+        m_Scale: {x: 3.13, y: 2.39}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 2ac79df12468e6948a4a24b6d65bb8be, type: 3}
+        m_Scale: {x: 2, y: 2}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _RTex
+      second:
+        m_Texture: {fileID: 2800000, guid: f71c0593a88a3ac4ab95daba4f4cceb3, type: 3}
+        m_Scale: {x: 0.5, y: 0.6}
+        m_Offset: {x: 1.02, y: 0.27}
+    m_Floats: []
+    m_Colors: []
